@@ -1,0 +1,140 @@
+body{
+    background: blueviolet;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+    /* to display the show popup button in center */
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 95vh;
+}
+
+.modalWrapper{
+   position: fixed;
+   left:0;
+   top:0;
+   background: rgba(0, 0, 0, 0.5);
+   height:100%;
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   opacity: 0;
+   pointer-events: none;
+   transition:all.4s ease-in-out;
+}
+
+.content{
+    background: white;
+    width: 500px;
+    max-width: 90%;
+    padding: 18px;
+    border-radius: 15px;
+    position:relative;
+    /* popup window will go -100% up when we click on cross button matlab screen k  bahar chla jayega upar jakar */
+    transform: translateY(-100%);
+    transition:all.4s ease-in-out;
+}
+
+.pop-btn{
+    cursor: pointer;
+}
+.title-add-post{
+    padding-bottom: 8px;
+    margin-bottom:5px;
+    border-bottom: 2px solid black;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+}
+.action{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+}
+.upload{
+    cursor:pointer ;
+    background: blueviolet;
+    color: antiquewhite;
+    border-radius: 5px;
+    font-size: 16px;
+    margin: 10px;
+    padding:10px;
+}
+.upload:hover{
+    background:rgb(198, 141, 252) ;
+}
+
+.action .file-upload{
+    cursor:pointer ;
+    background: blueviolet;
+    color: antiquewhite;
+    border-radius: 5px;
+    margin: 10px;
+    text-decoration: none;
+}
+.action #custom-text{
+    font-size: 10px;
+    border-radius: 5px;    
+    padding: 13.2px;
+    border:1px solid  rgb(122, 119, 119);
+}
+
+.content button.close-btn{
+    cursor:pointer ;
+    background: none;
+    border: none;
+    font-size: 30px;  
+
+    position:absolute;
+    right: 10px;
+    top:10px;
+}
+.content button.close-btn:hover{
+    color: blueviolet;
+
+}
+
+.active{
+    opacity: 1;
+    pointer-events: auto;
+}
+.modalWrapper.active .content{
+    transform:translateY(0px);
+}
+
+.center-add-post{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.add-post-tag .center-add-post .caption-area{
+    margin-top:7px;
+    margin-bottom: 10px;
+    height: 30vh;
+    width:60%;
+    border:1px solid  rgb(122, 119, 119);
+}
+.caption placeholder{
+    text-decoration: none;
+}
+.add-post-tag .center-add-post .img-prev{
+    margin-top:7px;
+    margin-bottom: 10px;
+    padding: 2px;
+    height: 30vh;
+    flex-grow: 1;
+    border: none;
+    border:1px solid  rgb(122, 119, 119);
+}
+.img-prev span{
+    color: grey;
+    font-family:'serif';
+}
+.img-prev-image{
+    flex-grow: 1;    
+    display: none;
+   height: 100%;
+    width:100%;
+}
+
+
